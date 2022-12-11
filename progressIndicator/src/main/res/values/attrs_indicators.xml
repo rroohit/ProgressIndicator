@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressIndicator">
+        <!-- Set track thickness. -->
+        <attr name="trackThickNess" format="integer" />
+        <!-- Number of indicators on progress bar. >= 2. -->
+        <attr name="noOfIndicators" format="integer" />
+        <!-- Set indicators radius. -->
+        <attr name="indicatorRadius" format="integer" />
+        <!-- Set completed indicators. -->
+        <attr name="selectedIndicator" format="integer" />
+        <!-- Set background color for tracker and uncompleted indicator color.  -->
+        <attr name="trackerColor" format="color" />
+        <!-- Set color for progress tracker and completed indicator color.  -->
+        <attr name="trackerProgressColor" format="color" />
+
+    </declare-styleable>
+
+</resources>
