@@ -1,5 +1,5 @@
 # ProgressIndicator
-Android Progress Indicator
+Android Horizontal Progress Indicator
 
 ## Download Using Gradle
 [![](https://jitpack.io/v/rroohit/ProgressIndicator.svg)](https://jitpack.io/#rroohit/ProgressIndicator)
