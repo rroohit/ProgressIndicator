@@ -42,8 +42,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:noOfIndicators="7"
-        app:trackThickNess="15"
+        app:noOfIndicators="5"
+        app:trackThickNess="20"
         app:trackerColor="@color/tracker_color"
         app:trackerProgressColor="@color/progress_tracker_color"/>
 
