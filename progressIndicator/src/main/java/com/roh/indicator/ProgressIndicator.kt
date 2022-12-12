@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.util.Log
 import android.widget.ProgressBar
 import com.roh.progress.indicator.R
 import kotlin.math.abs
@@ -93,7 +92,6 @@ class ProgressIndicator : ProgressBar {
     private val trackerBackground = Paint()
     private val trackerFilled = Paint()
 
-    var count = 0
     init {
 
         paintIndicator.isAntiAlias = true
@@ -170,8 +168,6 @@ class ProgressIndicator : ProgressBar {
 
 
     override fun onDraw(canvas: Canvas) {
-        count++
-        Log.d("PROGRESS_INDICATOR", "onDraw: count => $count")
 
         trackerBackground.color = trackBackgroundColor
         trackerFilled.color = trackerProgressColor
