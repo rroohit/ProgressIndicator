@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.Log
 import android.widget.ProgressBar
 import com.roh.progress.indicator.R
 import kotlin.math.abs
@@ -27,6 +28,7 @@ class ProgressIndicator : ProgressBar {
         get() = _noOfIndicators
         set(value) {
             _noOfIndicators = value
+            invalidate()
         }
 
 
@@ -74,6 +76,7 @@ class ProgressIndicator : ProgressBar {
         get() = _trackThickness
         set(value) {
             _trackThickness = value
+            invalidate()
         }
 
     /**
@@ -83,12 +86,14 @@ class ProgressIndicator : ProgressBar {
         get() = _indicatorRadius
         set(value) {
             _indicatorRadius = value
+            invalidate()
         }
 
     private val paintIndicator = Paint()
     private val trackerBackground = Paint()
     private val trackerFilled = Paint()
 
+    var count = 0
     init {
 
         paintIndicator.isAntiAlias = true
@@ -165,13 +170,14 @@ class ProgressIndicator : ProgressBar {
 
 
     override fun onDraw(canvas: Canvas) {
+        count++
+        Log.d("PROGRESS_INDICATOR", "onDraw: count => $count")
 
         trackerBackground.color = trackBackgroundColor
         trackerFilled.color = trackerProgressColor
 
         //Set tracker thickness
-        val thickness =
-            if (trackThickness < height.toFloat() / 7F) height.toFloat() / 6F else trackThickness.toFloat()
+        val thickness = trackThickness.toFloat()
 
         ///
         val yCenter = height / 2F
@@ -229,22 +235,17 @@ class ProgressIndicator : ProgressBar {
         super.setIndeterminate(false)
     }
 
+    override fun setMaxHeight(maxHeight: Int) {
+        super.setMaxHeight(100)
+    }
+
+    override fun setMin(min: Int) {
+        super.setMin(30)
+    }
+
     //Handle default progress... has to scale with completed indicators...
     override fun setProgress(progress: Int) {
         super.setProgress(0)
-//        if (width > 0 && height > 0) {
-//            val circleRadius = height / 2
-//            val w = width - (circleRadius * 2)
-//            val positionDiff = ((w) / (noOfIndicators - 1))
-//
-//            val length = (positionDiff * (selectedIndicator - 1)) / width
-//            val progressLength = ((length) * (100))
-//
-//            super.setProgress(progressLength + 1)
-//
-//        } else {
-//            super.setProgress(0)
-//        }
     }
 
 }

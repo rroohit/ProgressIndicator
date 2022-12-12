@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Progress Indicator</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+
+    <string name="indicator_count">Indicator Count</string>
+    <string name="selected_indicator">Selected Indicator</string>
+    <string name="indicator_radius">Indicator Radius</string>
+    <string name="tracker_thickness">Tracker Thickness</string>
+    <string name="default_indicator_count">2</string>
+    <string name="default_selected_indicator">1</string>
+    <string name="default_indicator_radius">20</string>
+    <string name="default_tracker_thickness">15</string>
 
 </resources>

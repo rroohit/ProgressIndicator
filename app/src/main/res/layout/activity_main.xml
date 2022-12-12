@@ -12,10 +12,10 @@
         style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#7FBCD2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#7FBCD2">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             style="@style/TextAppearance.AppCompat.Title"
@@ -34,18 +34,238 @@
     <com.roh.indicator.ProgressIndicator
         android:id="@+id/indicator"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="50dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="12dp"
-        app:indicatorRadius="45"
+        android:minHeight="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        app:noOfIndicators="5"
-        app:trackThickNess="20"
         app:trackerColor="@color/tracker_color"
-        app:trackerProgressColor="@color/progress_tracker_color"/>
+        app:trackerProgressColor="@color/progress_tracker_color" />
+
+    <TextView
+        android:id="@+id/txt_indicator_count_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:letterSpacing="0.1"
+        android:text="@string/indicator_count"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/indicator"
+        app:layout_constraintStart_toStartOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_decrease_indicator_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_minus"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toStartOf="@+id/txt_indicator_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_indicator_count_helper"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/txt_indicator_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/default_indicator_count"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fb_decrease_indicator_count"
+        app:layout_constraintEnd_toStartOf="@+id/fb_increase_indicator_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fb_decrease_indicator_count"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_indicator_count" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_increase_indicator_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_plus"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_indicator_count"
+        app:layout_constraintTop_toBottomOf="@+id/txt_indicator_count_helper"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txt_selected_indicator_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.1"
+        android:text="@string/selected_indicator"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/indicator"
+        app:layout_constraintStart_toStartOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/fb_decrease_indicator_count" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_decrease_selected_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_minus"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toStartOf="@+id/txt_selected_indicator"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_selected_indicator_helper"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txt_selected_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/default_selected_indicator"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fb_decrease_selected_count"
+        app:layout_constraintEnd_toStartOf="@+id/fb_increase_selected_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fb_decrease_selected_count"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_selected_count"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_increase_selected_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:fabSize="mini"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_selected_indicator"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_selected_count" />
+
+    <TextView
+        android:id="@+id/txt_indicator_radius_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.1"
+        android:text="@string/indicator_radius"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/indicator"
+        app:layout_constraintStart_toStartOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/fb_decrease_selected_count" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_decrease_indicator_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_minus"
+        app:fabSize="mini"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toStartOf="@+id/txt_indicator_radius"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_indicator_radius_helper" />
+
+    <TextView
+        android:id="@+id/txt_indicator_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/default_indicator_radius"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fb_decrease_indicator_radius"
+        app:layout_constraintEnd_toStartOf="@+id/fb_increase_indicator_radius"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fb_decrease_indicator_radius"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_indicator_radius" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_increase_indicator_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:fabSize="mini"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_indicator_radius"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_indicator_radius" />
+
+    <TextView
+        android:id="@+id/txt_tracker_thickness_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.1"
+        android:text="@string/tracker_thickness"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/indicator"
+        app:layout_constraintStart_toStartOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/fb_decrease_indicator_radius" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_decrease_track_thickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_minus"
+        app:fabSize="mini"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toStartOf="@+id/txt_tracker_thickness"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tracker_thickness_helper" />
+
+
+    <TextView
+        android:id="@+id/txt_tracker_thickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/default_tracker_thickness"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fb_decrease_track_thickness"
+        app:layout_constraintEnd_toStartOf="@+id/fb_increase_track_thickness"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fb_decrease_track_thickness"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_track_thickness" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_increase_track_thickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        app:fabSize="mini"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txt_tracker_thickness"
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_track_thickness" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
