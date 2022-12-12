@@ -14,12 +14,11 @@ class MainViewModel: ViewModel() {
     private val _selectedIndicator = MutableStateFlow(1)
     val selectedIndicator : StateFlow<Int> = _selectedIndicator
 
-    private val _indicatorRadius = MutableStateFlow(20)
+    private val _indicatorRadius = MutableStateFlow(35)
     val indicatorRadius: StateFlow<Int> = _indicatorRadius
 
     private val _trackerThickness = MutableStateFlow(15)
     val trackerThickness: StateFlow<Int> = _trackerThickness
-
 
 
     fun updateIndicatorCount(count: Int) {

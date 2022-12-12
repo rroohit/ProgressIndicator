@@ -5,6 +5,7 @@
 
     <color name="tracker_color">#B2B2B2</color>
     <color name="progress_tracker_color">#00ABB3</color>
+    <color name="bar_color">#4C064B</color>
 
 
 </resources>
