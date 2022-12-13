@@ -25,4 +25,20 @@ implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
 
 ## Usage
 
-### Basic Example
+### Basic Example:
+
+In xml:
+
+```xml
+    <com.roh.indicator.ProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:noOfIndicators="5"
+        app:selectedIndicator="1"
+        app:indicatorRadius="40"
+        app:trackThickNess="20"
+        app:trackerColor="@color/tracker_color"
+        app:trackerProgressColor="@color/progress_tracker_color"/>
+```
+
+#
