@@ -25,7 +25,7 @@ implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
 
 ## Usage
 
-### Basic Example:
+### Basic Example
 
 In xml:
 
