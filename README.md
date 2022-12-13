@@ -9,7 +9,7 @@ Add this in your root `settings.gradle` at `dependencyResolutionManagement` in `
 ```groovy
 repositories {
     google()
-    ...
+    //...
     maven { url 'https://jitpack.io' }
 
 }
@@ -17,5 +17,5 @@ repositories {
 
 Then add this dependency to your **module-level** `build.gradle` in `dependencies` section:
 ```groovy
-implementation 'com.github.rroohit:ProgressIndicator:1.0.0'
+implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
 ```

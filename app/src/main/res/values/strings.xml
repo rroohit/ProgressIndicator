@@ -9,5 +9,10 @@
     <string name="default_selected_indicator">1</string>
     <string name="default_indicator_radius">20</string>
     <string name="default_tracker_thickness">15</string>
+    <string name="floating_btn">floating_btn</string>
+
+    <string name="txt_increase_indicator_count">Increase Indicator Count</string>
+    <string name="txt_decrease_indicator_count">Increase Indicator Count</string>
+
 
 </resources>

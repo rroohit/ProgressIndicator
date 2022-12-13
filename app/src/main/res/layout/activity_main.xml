@@ -70,7 +70,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_indicator_count_helper"
-        tools:ignore="ContentDescription" />
+        android:contentDescription="@string/txt_increase_indicator_count"
+        />
 
 
     <TextView
@@ -99,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_indicator_count"
         app:layout_constraintTop_toBottomOf="@+id/txt_indicator_count_helper"
-        tools:ignore="ContentDescription" />
+        android:contentDescription="@string/txt_decrease_indicator_count" />
 
     <TextView
         android:id="@+id/txt_selected_indicator_helper"
@@ -127,7 +128,8 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_selected_indicator_helper"
-        tools:ignore="ContentDescription" />
+        android:contentDescription="@string/selected_indicator"
+        />
 
     <TextView
         android:id="@+id/txt_selected_indicator"
@@ -151,11 +153,12 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_plus"
         app:fabSize="mini"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_selected_indicator"
-        app:layout_constraintTop_toTopOf="@+id/fb_decrease_selected_count" />
+        app:layout_constraintTop_toTopOf="@+id/fb_decrease_selected_count"
+        android:contentDescription="@string/tracker_thickness"
+        />
 
     <TextView
         android:id="@+id/txt_indicator_radius_helper"
@@ -177,9 +180,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/indicator_radius"
         android:src="@drawable/ic_minus"
         app:fabSize="mini"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toStartOf="@+id/txt_indicator_radius"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -204,9 +207,9 @@
         android:id="@+id/fb_increase_indicator_radius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/indicator_radius"
         android:src="@drawable/ic_plus"
         app:fabSize="mini"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_indicator_radius"
@@ -231,9 +234,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/tracker_thickness"
         android:src="@drawable/ic_minus"
         app:fabSize="mini"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toStartOf="@+id/txt_tracker_thickness"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -259,9 +262,9 @@
         android:id="@+id/fb_increase_track_thickness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/tracker_thickness"
         android:src="@drawable/ic_plus"
         app:fabSize="mini"
-        tools:ignore="ContentDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_tracker_thickness"
