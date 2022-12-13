@@ -22,3 +22,7 @@ Then add this dependency to your **module-level** `build.gradle` in `dependencie
 ```groovy
 implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
 ```
+
+## Usage
+
+### Basic Example
