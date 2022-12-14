@@ -1,6 +1,6 @@
 # ProgressIndicator
 
-Android Horizontal Progress Indicator
+Android Horizontal Progress Indicator, fully customizable.
 
 https://user-images.githubusercontent.com/36406595/207393203-666fa372-16c4-4bd7-95f6-cef6bdcef473.mp4
 
