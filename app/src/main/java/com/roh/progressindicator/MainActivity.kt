@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
                 viewModel.indicatorRadius.collect { radius ->
                     binding.txtIndicatorRadius.text = radius.toString()
                     binding.indicator.indicatorRadius = radius
-
                 }
             }
 
@@ -50,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                 viewModel.trackerThickness.collect { thickness ->
                     binding.txtTrackerThickness.text = thickness.toString()
                     binding.indicator.trackThickness = thickness
-
                 }
             }
 
