@@ -27,6 +27,7 @@ dependencies {
     //...other repositories
     
     implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
+    
 }
 ```
 
