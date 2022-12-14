@@ -35,7 +35,7 @@ dependencies {
 
 ### Xml
 
-First add following widget in xml with customized attributes:
+First add following widget in `xml` with customized attributes:
 
 ```xml
 
