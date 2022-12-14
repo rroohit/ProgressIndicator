@@ -23,7 +23,11 @@ repositories {
 Then add this dependency to your **module-level** `build.gradle` in `dependencies` section:
 
 ```groovy
-implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
+dependencies {
+    //...other repositories
+    
+    implementation 'com.github.rroohit:ProgressIndicator:1.1.0'
+}
 ```
 
 ## Usage
