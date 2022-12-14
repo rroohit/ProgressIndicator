@@ -58,9 +58,15 @@ We can customize the ProgressIndicator using the below methods from base `activi
     indicator.trackThickness = 20       //Track thickness of horizontal progress bar
 ```
 
-#
+## ProgressIndicator Attributes
 
-## License
+Here are the attributes of `ProgressIndicator` for `xml` and `kotlin`:
+
+| Attributes   | Type   | Default  | Description   |
+|--------------|--------|----------|---------------|
+
+
+### License
 
 ```
 Copyright 2022 rohit
