@@ -67,8 +67,14 @@ We can customize the ProgressIndicator using the below methods from base `activi
 
 Here are the attributes of `ProgressIndicator` for `xml` and `kotlin`:
 
-| Attributes   | Type   | Default  | Description   |
-|--------------|--------|----------|---------------|
+| Attributes           | Type  | Default     | Description                                                                |
+|----------------------|-------|-------------|----------------------------------------------------------------------------|
+| noOfIndicators       | int   | 2           | Number of indicators to show on progress bar                               |
+| selectedIndicator    | int   | 1           | Selected indicator is completed/Progressed indicator index                 |    
+| indicatorRadius      | int   | 40          | Radius of an indicator circle                                              |    
+| trackThickNess       | int   | 20          | Thickness of thin line / (progressbar) tracker which joints each indicator |    
+| trackerColor         | color | color/Gray  | Tracker and Indicator color for uncompleted or unfinished                  |    
+| trackerProgressColor | color | color/Black | Tracker and Indicator color for completed or finished                      |    
 
 
 ### License
