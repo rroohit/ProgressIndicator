@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             launch(Dispatchers.Main) {
                 viewModel.indicatorCount.collect { count ->
                     binding.txtIndicatorCount.text = count.toString()
-
+                    binding.indicator.noOfIndicators = count
                 }
             }
 
